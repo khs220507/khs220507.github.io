@@ -203,11 +203,6 @@ jekyll-archives:
       year: /blog/:year/
       tags: /blog/:type/:name/
       categories: /blog/:type/:name/
-  books:
-    enabled:
-      - year
-      - tags
-      - categories
 display_tags:
   - 임베디드
   - 통신

@@ -56,3 +56,8 @@ cv:
       - name: 한국사능력검정시험 1급
       - name: 컴퓨터활용능력 2급
       - name: 1종 대형 운전면허
+    Training:
+      - label: 에이콘 아카데미
+        details: 웹 개발자 양성 과정 — Java·Spring·MySQL 기반 팀 프로젝트
+      - label: 비트캠프
+        details: 인공지능 개발자 양성 과정 — Python 데이터 분석·딥러닝 프로젝트
