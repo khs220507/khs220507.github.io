@@ -1,4 +1,4 @@
-name: Deploy PaperMod blog
+name: Deploy al-folio
 on:
   push:
     branches: [main]
@@ -15,17 +15,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
         with:
-          submodules: recursive
-      - name: Install Hugo
-        run: |
-          curl -fsSL https://github.com/gohugoio/hugo/releases/download/v0.167.0/hugo_0.167.0_linux-amd64.tar.gz -o /tmp/hugo.tar.gz
-          tar -xzf /tmp/hugo.tar.gz -C /tmp hugo
+          ruby-version: '3.3.5'
+          bundler-cache: true
+          working-directory: al-folio
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit al-folio configuration
+        working-directory: al-folio
+        run: bundle exec al-folio upgrade audit --no-fail
       - name: Build
-        run: /tmp/hugo --source site --minify
+        working-directory: al-folio
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --trace
+      - name: Verify generated pages
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          root = Path('al-folio/_site')
+          for page in ['index.html', 'cv/index.html', 'projects/index.html', 'blog/index.html', 'posts/uart/index.html']:
+              text = (root / page).read_text()
+              assert '김현수' in text, page
+              assert 'Albert Einstein' not in text, page
+          assert len(list((root / 'projects').glob('*/index.html'))) == 4
+          assert len(list((root / 'posts').glob('*/index.html'))) == 7
+          print('Profile, CV, four projects, and seven posts verified.')
+          PY
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site/public
+          path: al-folio/_site
   deploy:
     needs: build
     runs-on: ubuntu-latest

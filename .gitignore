@@ -11,3 +11,8 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+al-folio/_site/
+al-folio/.jekyll-cache/
+al-folio/.jekyll-metadata
+al-folio/.bundle/
+al-folio/vendor/
