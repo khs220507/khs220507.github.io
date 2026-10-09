@@ -21,3 +21,8 @@ minimal-mistakes/.jekyll-cache/
 minimal-mistakes/.jekyll-metadata
 minimal-mistakes/.bundle/
 minimal-mistakes/vendor/
+chirpy/_site/
+chirpy/.jekyll-cache/
+chirpy/.jekyll-metadata
+chirpy/.bundle/
+chirpy/vendor/

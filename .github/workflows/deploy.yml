@@ -1,4 +1,4 @@
-name: Deploy Minimal Mistakes
+name: Deploy Chirpy
 on:
   push:
     branches: [main]
@@ -15,14 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3.5'
+          ruby-version: '3.4'
           bundler-cache: true
-          working-directory: minimal-mistakes
+          working-directory: chirpy
           bundler: '2.6.9'
       - name: Build
-        working-directory: minimal-mistakes
+        working-directory: chirpy
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace
@@ -30,19 +32,19 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          root = Path('minimal-mistakes/_site')
-          for page in ['index.html', 'cv/index.html', 'projects/index.html', 'blog/index.html', 'posts/uart/index.html']:
+          root = Path('chirpy/_site')
+          for page in ['index.html', 'about/index.html', 'cv/index.html', 'projects/index.html', 'posts/uart/index.html', 'tags/index.html']:
               text = (root / page).read_text()
               assert '김현수' in text, page
               assert 'Albert Einstein' not in text, page
-              assert 'Minimal Mistakes' in text, page
+              assert 'Chirpy' in text, page
           assert len(list((root / 'projects').glob('*/index.html'))) == 4
           assert len(list((root / 'posts').glob('*/index.html'))) == 7
           print('Profile, CV, four projects, and seven posts verified.')
           PY
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: minimal-mistakes/_site
+          path: chirpy/_site
   deploy:
     needs: build
     runs-on: ubuntu-latest
