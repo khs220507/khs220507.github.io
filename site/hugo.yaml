@@ -7,7 +7,7 @@ timeZone: Asia/Seoul
 hasCJKLanguage: true
 enableRobotsTXT: true
 pagination:
-  pagerSize: 6
+  pagerSize: 12
 params:
   env: production
   author: 김현수
