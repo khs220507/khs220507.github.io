@@ -1,7 +1,7 @@
 ---
 title: STM32 구현 노트 — 학습 목차와 검증 상태
 description: C·HAL·CMSIS부터 GPIO·UART·DMA·ADC·Timer·PWM·I2C까지 구현 기록을 모았습니다.
-date: 2026-10-09 00:00:00 +0900
+date: 2026-10-09T14:18:37.097Z
 categories:
   - STM32 구현 노트
 tags:

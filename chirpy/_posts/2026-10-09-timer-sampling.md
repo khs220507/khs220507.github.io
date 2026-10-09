@@ -1,7 +1,7 @@
 ---
 title: STM32 Timer — TIM2 인터럽트로 500ms 샘플링
 description: 타이머 Callback은 Flag만 설정하고 Main Loop에서 센서를 읽습니다.
-date: 2026-10-09 00:00:00 +0900
+date: 2026-10-09T14:18:37.097Z
 categories:
   - STM32 구현 노트
   - 주변장치

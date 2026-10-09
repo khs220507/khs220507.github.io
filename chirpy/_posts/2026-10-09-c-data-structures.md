@@ -1,7 +1,7 @@
 ---
 title: C 자료구조 — 문자열 버퍼·Stack·Queue·Ring Buffer
 description: 배열 경계와 FIFO·LIFO, 원형 인덱스를 호스트 C 코드로 구현했습니다.
-date: 2026-10-09 00:00:00 +0900
+date: 2026-10-09T14:18:37.097Z
 categories:
   - STM32 구현 노트
   - 기반 지식
