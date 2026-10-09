@@ -1,0 +1,89 @@
+{{ define "main" }}
+{{- $raw := .RawContent -}}
+{{- $career := index (split (index (split $raw "## 주요 프로젝트") 0) "## 경력") 1 -}}
+{{- $projects := index (split (index (split $raw "## 학력") 0) "## 주요 프로젝트") 1 -}}
+{{- $education := index (split (index (split $raw "## 교육") 0) "## 학력") 1 -}}
+{{- $training := index (split (index (split $raw "## 자격증") 0) "## 교육") 1 -}}
+{{- $certificates := index (split (index (split $raw "## 기술") 0) "## 자격증") 1 -}}
+{{- $skills := index (split (index (split $raw "## 기술") 1) "[GitHub]") 0 -}}
+<article class="cv-sheet">
+  <nav class="cv-nav" aria-label="페이지 이동">
+    <a href="{{ site.Home.RelPermalink }}">← 블로그</a>
+    <button type="button" onclick="window.print()">인쇄 · PDF 저장</button>
+  </nav>
+
+  <header class="cv-hero">
+    <div class="cv-topline"><span>ENGINEERING PORTFOLIO</span><span>김현수</span></div>
+    <div class="cv-hero-row">
+      <div>
+        <h1>장비 운영·제어 소프트웨어<br>개발 경험</h1>
+        <p class="cv-subtitle">튀김로봇 시스템 · EGSE · 배터리팩</p>
+      </div>
+      <img src="{{ "images/profile.jpg" | relURL }}" width="96" height="128" alt="김현수 증명사진" class="cv-photo">
+    </div>
+    <p class="cv-statement">운영 UI · 장비 제어<br>공정 관리 · 데이터 연동</p>
+    <div class="cv-focus" aria-label="주요 분야">
+      <span>운영 UI</span><span>통신 · 제어</span><span>복구 · 기록</span>
+    </div>
+  </header>
+
+  <div class="cv-grid">
+    <div class="cv-main-column">
+      <section class="cv-section cv-experience" aria-labelledby="cv-experience-heading">
+        <div class="cv-section-head"><span>01</span><h2 id="cv-experience-heading">경력</h2></div>
+        <ul class="cv-career-list">
+          {{- range split $career "\n" -}}
+            {{- $row := trim . " \r\n" -}}
+            {{- if and (hasPrefix $row "|") (not (in $row "---")) (not (in $row "회사 · 역할")) -}}
+              {{- $cells := split $row "|" -}}
+              <li>{{ trim (index $cells 1) " " }}</li>
+            {{- end -}}
+          {{- end -}}
+        </ul>
+      </section>
+      <section class="cv-section cv-projects" aria-labelledby="cv-projects-heading">
+        <div class="cv-section-head"><span>02</span><h2 id="cv-projects-heading">주요 프로젝트</h2></div>
+        <div class="cv-project-list">
+          {{- range split $projects "### " -}}
+            {{- $entry := trim . " \r\n" -}}
+            {{- if $entry -}}
+              <div class="cv-project-card">{{ index (split $entry "\n") 0 }}</div>
+            {{- end -}}
+          {{- end -}}
+        </div>
+      </section>
+    </div>
+
+    <aside class="cv-side-column" aria-label="학력·교육·자격증·기술">
+      <section class="cv-section">
+        <div class="cv-section-head"><span>03</span><h2>학력</h2></div>
+        {{ .RenderString (dict "display" "block") $education }}
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-head"><span>04</span><h2>교육</h2></div>
+        <ul>
+          {{- range split $training "\n" -}}
+            {{- $line := trim . " \r\n" -}}
+            {{- if hasPrefix $line "- **" -}}
+              {{- $name := index (split (strings.TrimPrefix "- **" $line) "**") 0 -}}
+              <li>{{ $name }}</li>
+            {{- end -}}
+          {{- end -}}
+        </ul>
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-head"><span>05</span><h2>자격증</h2></div>
+        {{ .RenderString (dict "display" "block") $certificates }}
+      </section>
+      <section class="cv-section">
+        <div class="cv-section-head"><span>06</span><h2>기술</h2></div>
+        {{ .RenderString (dict "display" "block") $skills }}
+      </section>
+    </aside>
+  </div>
+  <footer class="cv-contact">
+    <a href="mailto:khs220507@gmail.com">khs220507@gmail.com</a>
+    <a href="https://github.com/khs220507">github.com/khs220507</a>
+  </footer>
+</article>
+{{ end }}

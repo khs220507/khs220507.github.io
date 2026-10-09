@@ -1,6 +1,7 @@
 ---
 title: 소개
 description: 김현수의 경력과 프로젝트를 소개합니다.
+layout: cv
 url: /about/
 hidemeta: true
 ---
