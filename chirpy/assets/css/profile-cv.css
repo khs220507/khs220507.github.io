@@ -39,6 +39,13 @@ body:has(.cv-sheet) main { flex: 0 0 100%; max-width: 100%; width: 100%; }
 .cv-project+.cv-project { border-top: 1px solid var(--cv-border); padding-top: 1.2rem; margin-top: 1.2rem; }
 .cv-project h3 { margin-bottom: .55rem; }
 .cv-project h3 span { font-size: .75rem; }
+.cv-entry-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .2rem .8rem; }
+.cv-period { font-size: .72rem; color: var(--text-muted-color); white-space: nowrap; }
+.cv-sheet .cv-entry-meta { color: var(--text-muted-color); font-size: .73rem; margin: .3rem 0 .7rem; }
+.cv-education+.cv-education { margin-top: 1.3rem; }
+.cv-credential-meta { display: block; color: var(--text-muted-color); font-size: .7rem; }
+.cv-sheet .cv-highlights { padding-left: 1.1rem; margin: .65rem 0 0; font-size: .81rem; }
+.cv-highlights li+li { margin-top: .45rem; }
 .cv-skill-group+.cv-skill-group,.cv-training+.cv-training { margin-top: 1.1rem; }
 .cv-sheet .cv-skill-group h3 { font-size: .72rem; color: var(--text-muted-color); font-weight: 500; margin-bottom: .5rem; }
 .cv-sheet .cv-chips { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; margin: 0; padding: 0; }

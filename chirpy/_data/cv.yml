@@ -1,63 +1,116 @@
 cv:
   name: 김현수
+  english_name: Hyunsoo Kim
   label: Software Engineer
+  updated: '2026.09'
   email: khs220507@gmail.com
-  summary: 장비 제어, 시스템 연동, 통신 소프트웨어를 개발합니다. STM32 C 개발과 주변장치 제어, Ethernet·RS-485 통신으로 임베디드 개발 경험을 확장하고 있습니다.
-  social_networks:
-    - network: GitHub
-      username: khs220507
+  summary: 장비 제어, 시스템 통합, 장비 통신 소프트웨어 개발 경험을 갖고 있습니다. STM32 C 개발, 주변장치 제어, Ethernet·RS-485 통신을 통해 임베디드 소프트웨어로 경험을 확장하고 있습니다.
+  research_focus:
+    - 임베디드 시스템
+    - 임베디드 통신
+    - 네트워크 소프트웨어
+    - 시스템 통합
   sections:
     Experience:
       - company: SPILAB
         position: Software Engineer
-        summary: C#/.NET 배터리팩 설계 시뮬레이터 UI
+        period: '2026'
+        summary: 배터리팩 설계 시뮬레이터용 C#/.NET UI 소프트웨어를 개발했습니다. 파라미터 입력, 후보 설계안 비교, 결과 시각화 화면을 구현했습니다.
       - company: Compass Systems
+        department: 로봇사업팀
         position: 선임연구원
-        summary: 협동로봇 조리 자동화 시스템의 상위 제어·장비 연동
+        period: 2025.09 – 2026.05
+        summary: 협동로봇 조리 자동화 시스템의 상위 제어 소프트웨어를 개발하고 TCP/IP로 로봇과 외부 장비를 연동했습니다. 작업 순서, 장비 상태 모니터링, 타이머, 우선순위 처리 및 예외 로직을 구현했습니다.
       - company: Vine Telecom
+        department: 응용 소프트웨어
         position: 연구원
-        summary: C#/WPF 시험 장비 제어·모니터링 및 시뮬레이터
+        period: 2024.08 – 2025.08
+        summary: 시험 장비와 시뮬레이터용 C#/WPF 제어·모니터링 소프트웨어를 개발했습니다. TCP/IP·시리얼 통신, 시험 시나리오 및 시스템 검증 기능을 구현했습니다.
       - company: Article
+        department: IT 운영
         position: 엔지니어
-        summary: VMware 인프라 운영, 장애 대응 및 자원 모니터링
-      - company: 네피리티
-        position: 개발
-        summary: Python 기반 NLP 모델 프로토타입 개발
+        period: 2024.02 – 2024.08
+        summary: 현대오토에버와 협업하여 현대캐피탈의 VMware 가상화 인프라를 운영했습니다. 장애 대응, 자원 모니터링 및 기술 지원을 수행했습니다.
     Projects:
-      - name: STM32 센서·통신 — 개인 프로젝트
-        summary: C 레지스터 제어로 GPIO·ADC·PWM·UART·SPI·I2C를 구현했습니다. W5500 Ethernet/TCP, RS-485, MPU6050·초음파 센서를 연동하고 PC 모니터에서 센서 값과 통신 로그를 확인했습니다.
+      - slug: stm32
+        name: STM32 센서·통신 프로젝트
+        period: '2026'
+        organization: 개인 프로젝트
+        context: STM32 Nucleo-F401RE
+        summary: STM32 주변장치와 네트워크 인터페이스를 위한 PC 통신 모니터를 개발했습니다.
+        highlights:
+          - C 레지스터 수준 제어로 GPIO, ADC, PWM, UART, SPI, I2C 펌웨어를 구현했습니다.
+          - STM32 Nucleo-F401RE에 RS-485 통신, W5500 Ethernet/TCP, MPU6050 및 HC-SR04 센서를 연동했습니다.
+          - TCP·RS-485·UART용 PC 통신 모니터를 개발하고 센서 값과 통신 로그를 검증했습니다.
+          - STM32CubeIDE, 로직 애널라이저, 멀티미터로 레지스터·신호·하드웨어 동작을 확인하며 디버깅했습니다.
         url: https://khs220507.github.io/projects/stm32/
-      - name: 협동로봇 조리 자동화
-        summary: Python/PyQt 기반 상위 제어 소프트웨어와 TCP/IP 장비 연동을 개발했습니다. 작업 순서, 상태 모니터링, 타이머, 우선순위와 예외 처리를 구현하고 통합·기능 시험 및 현장 검증을 수행했습니다.
+      - slug: robot-automation
+        name: 협동로봇 조리 자동화
+        period: 2025.09 – 2026.05
+        organization: Compass Systems
+        context: 교촌에프앤비
+        summary: Python/PyQt 기반 상위 제어 소프트웨어로 협동로봇과 조리 장비를 연동했습니다.
+        highlights:
+          - Python/PyQt 상위 제어 소프트웨어를 개발하고 TCP/IP로 협동로봇과 조리 장비를 연동했습니다.
+          - 작업 순서, 장비 상태 모니터링, 타이머, 우선순위 처리와 예외 대응 로직을 구현했습니다.
+          - 시스템 통합, 기능 시험 및 현장 검증을 수행했습니다.
         url: https://khs220507.github.io/projects/robot-automation/
-      - name: EGSE 시험 장비·시뮬레이터
-        summary: C#/WPF 제어·모니터링 화면, TCP/IP·시리얼 통신과 시험 시나리오를 구현했습니다. 통합 시험, 시스템 검증과 소프트웨어 문서화에 참여했습니다.
+      - slug: egse
+        name: 방산 시험 장비(EGSE)·시뮬레이터
+        period: 2024.08 – 2025.08
+        organization: Vine Telecom
+        context: LIG넥스원 / 국방과학연구소
+        summary: C#/WPF 기반 시험 장비와 시뮬레이터의 제어·모니터링 소프트웨어를 개발했습니다.
+        highlights:
+          - 시험 장비와 시뮬레이터용 C#/WPF 제어·모니터링 소프트웨어를 개발했습니다.
+          - TCP/IP·시리얼 장비 통신, 시험 시나리오와 장비 제어 로직을 구현했습니다.
+          - 통합 시험, 시스템 검증 및 소프트웨어 문서화에 참여했습니다.
         url: https://khs220507.github.io/projects/egse/
-      - name: 배터리팩 설계 시뮬레이터
-        summary: C#/.NET 기반 설계 조건 입력, 후보 설계안 비교와 결과 시각화 화면을 개발했습니다.
+      - slug: battery-simulator
+        name: 배터리팩 설계 시뮬레이터
+        period: '2026'
+        organization: SPILAB
+        context: 엔지니어링 애플리케이션
+        summary: 배터리팩 설계 작업을 위한 C#/.NET UI를 개발했습니다.
+        highlights:
+          - 배터리팩 설계 흐름을 위한 C#/.NET 기반 UI 화면을 개발했습니다.
+          - 엔지니어링 분석을 위한 파라미터 입력, 후보 설계안 비교 및 결과 시각화 화면을 구현했습니다.
         url: https://khs220507.github.io/projects/battery-simulator/
     Education:
       - institution: 숭실대학교
         area: 전자공학
-        studyType: 학사
+        studyType: 학사 · 편입
+        period: 2019.03 – 2021.08
+        details: GPA 2.51
+      - institution: 학점은행제
+        area: 경영학
+        studyType: 과정 이수
+        period: 2015.01 – 2019.02
     Skills:
-      - name: Languages
-        keywords: C, C#, Python
-      - name: Application
-        keywords: WPF, PyQt, MVVM, .NET
-      - name: Embedded & Communication
-        keywords: STM32, UART/RS-485, SPI/I2C, TCP/IP
-      - name: Tools
-        keywords: Git, Wireshark
+      - name: Programming
+        keywords: C, C++ (기초), C#, Python
+      - name: MCU / Embedded
+        keywords: STM32 Nucleo-F401RE, C 레지스터 수준 프로그래밍, GPIO, ADC, PWM
+      - name: Communication
+        keywords: UART, RS-485, SPI, I2C, TCP/IP, Ethernet, W5500
+      - name: Development / Debugging
+        keywords: STM32CubeIDE, Git, Wireshark, 로직 애널라이저, 멀티미터
+      - name: Application Software
+        keywords: WPF, PyQt, MVVM
     Certificates:
       - name: 정보처리기사
+        issuer: 한국산업인력공단
+        year: '2024'
       - name: 전기기능사
+        issuer: 한국산업인력공단
+        year: '2017'
       - name: TensorFlow Developer Certificate
-      - name: 한국사능력검정시험 1급
-      - name: 컴퓨터활용능력 2급
-      - name: 1종 대형 운전면허
+        issuer: Google
+        year: '2021'
     Training:
       - label: 에이콘 아카데미
-        details: 웹 개발자 양성 과정 — Java·Spring·MySQL 기반 팀 프로젝트
-      - label: 비트캠프
-        details: 인공지능 개발자 양성 과정 — Python 데이터 분석·딥러닝 프로젝트
+        period: 2023.06 – 2023.12
+        details: 클라우드 기반 Java 풀스택 개발 과정
+      - label: 비트 아카데미
+        period: 2021.03 – 2021.09
+        details: AI 개발자 양성 과정
