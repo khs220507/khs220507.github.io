@@ -1,6 +1,8 @@
 .DS_Store
 
 node_modules
+site/resources/
+site/.hugo_build.lock
 public
 prof
 tsconfig.tsbuildinfo

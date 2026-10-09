@@ -1,0 +1,52 @@
+baseURL: https://khs220507.github.io/
+title: 김현수
+theme: PaperMod
+languageCode: ko-KR
+defaultContentLanguage: ko
+timeZone: Asia/Seoul
+hasCJKLanguage: true
+enableRobotsTXT: true
+pagination:
+  pagerSize: 6
+params:
+  env: production
+  author: 김현수
+  description: 장비 제어와 임베디드 소프트웨어를 기록합니다.
+  defaultTheme: light
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowToc: true
+  DateFormat: '2006.01.02'
+  mainSections: [posts]
+  homeInfoParams:
+    Title: 김현수
+  profileMode:
+    enabled: false
+menu:
+  main:
+    - name: 글
+      url: /posts/
+      weight: 10
+    - name: 소개
+      url: /about/
+      weight: 20
+    - name: 태그
+      url: /tags/
+      weight: 30
+    - name: 검색
+      url: /search/
+      weight: 40
+outputs:
+  home: [HTML, RSS, JSON]
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          inline: [['$', '$']]
+          block: [['$$', '$$']]
+  highlight:
+    noClasses: false

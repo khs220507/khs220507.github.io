@@ -1,0 +1,8 @@
+<section class="first-entry home-info compact-profile" aria-label="소개">
+  <img src="{{ "images/profile.jpg" | relURL }}" alt="김현수 증명사진" width="88" height="118" class="profile-photo">
+  <div>
+    <header class="entry-header"><h1>김현수</h1></header>
+    <div class="entry-content">{{ with site.GetPage "/profile" }}{{ .Content }}{{ end }}</div>
+  </div>
+</section>
+<h2 class="posts-heading">최근 글</h2>
