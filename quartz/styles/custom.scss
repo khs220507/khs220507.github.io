@@ -1,3 +1,16 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+body[data-slug="index"] {
+  .article-title { font-size: 2.25rem; line-height: 1.3; }
+  article > h2 { margin-top: 3rem; padding-bottom: .65rem; border-bottom: 2px solid var(--lightgray); }
+  article > h3 { margin-top: 2rem; color: var(--secondary); }
+  article > p, article li { line-height: 1.85; }
+  article li { margin-bottom: .7rem; }
+  article > p:first-child { color: var(--secondary); letter-spacing: .08em; font-size: .8rem; }
+}
+@media print {
+  .sidebar, .page-footer, footer { display: none !important; }
+  .page > #quartz-body { display: block; }
+  h2, h3 { break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+}
