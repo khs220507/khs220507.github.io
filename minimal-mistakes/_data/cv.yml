@@ -1,0 +1,63 @@
+cv:
+  name: 김현수
+  label: Software Engineer
+  email: khs220507@gmail.com
+  summary: 장비 제어, 시스템 연동, 통신 소프트웨어를 개발합니다. STM32 C 개발과 주변장치 제어, Ethernet·RS-485 통신으로 임베디드 개발 경험을 확장하고 있습니다.
+  social_networks:
+    - network: GitHub
+      username: khs220507
+  sections:
+    Experience:
+      - company: SPILAB
+        position: Software Engineer
+        summary: C#/.NET 배터리팩 설계 시뮬레이터 UI
+      - company: Compass Systems
+        position: 선임연구원
+        summary: 협동로봇 조리 자동화 시스템의 상위 제어·장비 연동
+      - company: Vine Telecom
+        position: 연구원
+        summary: C#/WPF 시험 장비 제어·모니터링 및 시뮬레이터
+      - company: Article
+        position: 엔지니어
+        summary: VMware 인프라 운영, 장애 대응 및 자원 모니터링
+      - company: 네피리티
+        position: 개발
+        summary: Python 기반 NLP 모델 프로토타입 개발
+    Projects:
+      - name: STM32 센서·통신 — 개인 프로젝트
+        summary: C 레지스터 제어로 GPIO·ADC·PWM·UART·SPI·I2C를 구현했습니다. W5500 Ethernet/TCP, RS-485, MPU6050·초음파 센서를 연동하고 PC 모니터에서 센서 값과 통신 로그를 확인했습니다.
+        url: https://khs220507.github.io/projects/stm32/
+      - name: 협동로봇 조리 자동화
+        summary: Python/PyQt 기반 상위 제어 소프트웨어와 TCP/IP 장비 연동을 개발했습니다. 작업 순서, 상태 모니터링, 타이머, 우선순위와 예외 처리를 구현하고 통합·기능 시험 및 현장 검증을 수행했습니다.
+        url: https://khs220507.github.io/projects/robot-automation/
+      - name: EGSE 시험 장비·시뮬레이터
+        summary: C#/WPF 제어·모니터링 화면, TCP/IP·시리얼 통신과 시험 시나리오를 구현했습니다. 통합 시험, 시스템 검증과 소프트웨어 문서화에 참여했습니다.
+        url: https://khs220507.github.io/projects/egse/
+      - name: 배터리팩 설계 시뮬레이터
+        summary: C#/.NET 기반 설계 조건 입력, 후보 설계안 비교와 결과 시각화 화면을 개발했습니다.
+        url: https://khs220507.github.io/projects/battery-simulator/
+    Education:
+      - institution: 숭실대학교
+        area: 전자공학
+        studyType: 학사
+    Skills:
+      - name: Languages
+        keywords: C, C#, Python
+      - name: Application
+        keywords: WPF, PyQt, MVVM, .NET
+      - name: Embedded & Communication
+        keywords: STM32, UART/RS-485, SPI/I2C, TCP/IP
+      - name: Tools
+        keywords: Git, Wireshark
+    Certificates:
+      - name: 정보처리기사
+      - name: 전기기능사
+      - name: TensorFlow Developer Certificate
+      - name: 한국사능력검정시험 1급
+      - name: 컴퓨터활용능력 2급
+      - name: 1종 대형 운전면허
+    Training:
+      - label: 에이콘 아카데미
+        details: 웹 개발자 양성 과정 — Java·Spring·MySQL 기반 팀 프로젝트
+      - label: 비트캠프
+        details: 인공지능 개발자 양성 과정 — Python 데이터 분석·딥러닝 프로젝트

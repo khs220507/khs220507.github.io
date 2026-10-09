@@ -1,4 +1,4 @@
-name: Deploy al-folio
+name: Deploy Minimal Mistakes
 on:
   push:
     branches: [main]
@@ -19,15 +19,10 @@ jobs:
         with:
           ruby-version: '3.3.5'
           bundler-cache: true
-          working-directory: al-folio
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Audit al-folio configuration
-        working-directory: al-folio
-        run: bundle exec al-folio upgrade audit --no-fail
+          working-directory: minimal-mistakes
+          bundler: '2.6.9'
       - name: Build
-        working-directory: al-folio
+        working-directory: minimal-mistakes
         env:
           JEKYLL_ENV: production
         run: bundle exec jekyll build --trace
@@ -35,18 +30,19 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          root = Path('al-folio/_site')
+          root = Path('minimal-mistakes/_site')
           for page in ['index.html', 'cv/index.html', 'projects/index.html', 'blog/index.html', 'posts/uart/index.html']:
               text = (root / page).read_text()
               assert '김현수' in text, page
               assert 'Albert Einstein' not in text, page
+              assert 'Minimal Mistakes' in text, page
           assert len(list((root / 'projects').glob('*/index.html'))) == 4
           assert len(list((root / 'posts').glob('*/index.html'))) == 7
           print('Profile, CV, four projects, and seven posts verified.')
           PY
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: al-folio/_site
+          path: minimal-mistakes/_site
   deploy:
     needs: build
     runs-on: ubuntu-latest

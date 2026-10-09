@@ -16,3 +16,8 @@ al-folio/.jekyll-cache/
 al-folio/.jekyll-metadata
 al-folio/.bundle/
 al-folio/vendor/
+minimal-mistakes/_site/
+minimal-mistakes/.jekyll-cache/
+minimal-mistakes/.jekyll-metadata
+minimal-mistakes/.bundle/
+minimal-mistakes/vendor/

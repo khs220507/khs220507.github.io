@@ -1,0 +1,84 @@
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: default
+locale: ko-KR
+timezone: Asia/Seoul
+title: 김현수
+subtitle: Software Engineer
+name: 김현수
+description: 장비 제어와 시스템 연동 소프트웨어를 개발하는 김현수의 경력, 프로젝트, 기술 기록입니다.
+url: https://khs220507.github.io
+baseurl: ''
+repository: khs220507/khs220507.github.io
+author:
+  name: 김현수
+  avatar: /assets/images/profile.jpg
+  bio: |-
+    장비 제어 · 시스템 연동
+    C# / Python / STM32
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/khs220507
+    - label: 이메일
+      icon: fas fa-fw fa-envelope
+      url: mailto:khs220507@gmail.com
+search: true
+search_full_content: true
+search_provider: lunr
+breadcrumbs: true
+words_per_minute: 200
+footer:
+  links:
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: https://github.com/khs220507
+include:
+  - _pages
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .bundle
+plugins:
+  - jekyll-include-cache
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-redirect-from
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+permalink: /posts/:title/
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+defaults:
+  - scope:
+      path: ''
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      toc: true
+      toc_sticky: true
+      share: false
+      related: true
+      show_date: true
+      math: true
+  - scope:
+      path: ''
+      type: projects
+    values:
+      layout: single
+      author_profile: true
+      share: false
