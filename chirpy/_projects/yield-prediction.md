@@ -1,12 +1,12 @@
 ---
-title: 협동로봇 튀김 조리 자동화
-description: 요구사항 분석부터 상위 제어 SW, 장비 통합, 현장 설치와 안정화까지 수행했습니다.
-importance: 2
-permalink: /projects/robot-automation/
-project_key: robot-automation
+title: 제조 데이터 기반 수율 예측
+description: 제조 데이터 추출·전처리부터 시계열 예측 모델 비교와 주요 변수 분석까지 수행했습니다.
+importance: 7
+permalink: /projects/yield-prediction/
+project_key: yield-prediction
 period: null
-organization: Compass Systems
-context: Kyochon F&B
+organization: Nepirity
+context: MES · EDS 제조 데이터
 ---
 
 {% assign project = site.data.cv.cv.sections.Projects | where: 'slug', page.project_key | first %}

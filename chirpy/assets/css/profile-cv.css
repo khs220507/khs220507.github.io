@@ -1,6 +1,6 @@
 /* Keep the portrait's face centered inside Chirpy's circular avatar. */
-#sidebar #avatar { width: 10rem; height: 10rem; }
-#sidebar #avatar img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0%; }
+#sidebar #avatar { width: 10rem; height: 10rem; background: #e4dbce; }
+#sidebar #avatar img { display: block; width: 88%; height: auto; max-width: none; margin: 0 auto; object-fit: initial; object-position: initial; }
 #sidebar #avatar img:hover { transform: none; }
 
 /* CV uses Chirpy's colors and page shell, with the former CV's section layout. */

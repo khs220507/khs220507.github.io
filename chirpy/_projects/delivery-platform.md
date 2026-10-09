@@ -1,12 +1,12 @@
 ---
-title: 협동로봇 튀김 조리 자동화
-description: 요구사항 분석부터 상위 제어 SW, 장비 통합, 현장 설치와 안정화까지 수행했습니다.
-importance: 2
-permalink: /projects/robot-automation/
-project_key: robot-automation
-period: null
-organization: Compass Systems
-context: Kyochon F&B
+title: 배달 플랫폼 클론 팀 프로젝트
+description: Java·Spring·MySQL 기반 배달 플랫폼 클론 프로젝트에 팀장으로 참여했습니다.
+importance: 8
+permalink: /projects/delivery-platform/
+project_key: delivery-platform
+period: 2023.10.20 – 2023.12.07
+organization: Acorn Academy
+context: 5인 팀 프로젝트
 ---
 
 {% assign project = site.data.cv.cv.sections.Projects | where: 'slug', page.project_key | first %}

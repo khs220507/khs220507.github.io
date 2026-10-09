@@ -1,12 +1,12 @@
 ---
-title: 협동로봇 튀김 조리 자동화
-description: 요구사항 분석부터 상위 제어 SW, 장비 통합, 현장 설치와 안정화까지 수행했습니다.
-importance: 2
-permalink: /projects/robot-automation/
-project_key: robot-automation
+title: Raypann Sim — 반도체 공정 시뮬레이터
+description: 포토공정 시뮬레이션, CD 예측·EDS 모니터링 UI와 AI 모델 연동을 개발했습니다.
+importance: 5
+permalink: /projects/raypann-sim/
+project_key: raypann-sim
 period: null
-organization: Compass Systems
-context: Kyochon F&B
+organization: SPILAB
+context: Korea Advanced Nano Fab Center (KANC)
 ---
 
 {% assign project = site.data.cv.cv.sections.Projects | where: 'slug', page.project_key | first %}

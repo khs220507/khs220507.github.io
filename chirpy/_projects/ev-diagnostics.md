@@ -1,12 +1,12 @@
 ---
-title: 협동로봇 튀김 조리 자동화
-description: 요구사항 분석부터 상위 제어 SW, 장비 통합, 현장 설치와 안정화까지 수행했습니다.
-importance: 2
-permalink: /projects/robot-automation/
-project_key: robot-automation
+title: EV 저전압 노드 진단 시뮬레이터
+description: 고장 시나리오와 진단 결과를 다루는 UI 및 전류·전압·온도 데이터 시각화를 개발했습니다.
+importance: 6
+permalink: /projects/ev-diagnostics/
+project_key: ev-diagnostics
 period: null
-organization: Compass Systems
-context: Kyochon F&B
+organization: SPILAB
+context: Hyundai Motor 제안 POC
 ---
 
 {% assign project = site.data.cv.cv.sections.Projects | where: 'slug', page.project_key | first %}

@@ -38,7 +38,8 @@ jobs:
               assert '김현수' in text, page
               assert 'Albert Einstein' not in text, page
               assert 'Chirpy' in text, page
-          assert len(list((root / 'projects').glob('*/index.html'))) == 4
+          source_projects = list(Path('chirpy/_projects').glob('*.md'))
+          assert len(list((root / 'projects').glob('*/index.html'))) == len(source_projects)
           import re
           source_posts = list(Path('chirpy/_posts').glob('*.md'))
           for source in source_posts:
@@ -46,7 +47,7 @@ jobs:
               assert match, source
               assert (root / match[1].strip('/') / 'index.html').exists(), source
           assert len(list((root / 'posts').glob('*/index.html'))) == len(source_posts)
-          print(f'Profile, CV, four projects, and {len(source_posts)} posts verified.')
+          print(f'Profile, CV, {len(source_projects)} projects, and {len(source_posts)} posts verified.')
           PY
       - uses: actions/upload-pages-artifact@v3
         with:

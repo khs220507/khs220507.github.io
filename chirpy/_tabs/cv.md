@@ -12,7 +12,7 @@ toc: false
   <header class="cv-hero">
     <p class="cv-eyebrow">ENGINEERING PORTFOLIO · UPDATED {{ cv.updated }}</p>
     <div class="cv-heading-row">
-      <div><h2 class="cv-name">{{ cv.name }}</h2><p class="cv-role">{{ cv.english_name }} · {{ cv.label }}</p></div>
+      <div><h2 class="cv-name">{{ cv.name }}</h2><p class="cv-role">{{ cv.english_name }} · {{ cv.label }} · 경력 {{ cv.total_experience }}</p></div>
       <button class="cv-print" type="button" onclick="window.print()"><i class="fas fa-print" aria-hidden="true"></i> 인쇄 · PDF 저장</button>
     </div>
     <p class="cv-headline">장비와 소프트웨어를 연결합니다.</p>
@@ -36,7 +36,7 @@ toc: false
       <section class="cv-card" aria-labelledby="projects">
         <h2 id="projects"><span class="cv-number">02</span> 주요 프로젝트</h2>
         {% for entry in cv.sections.Projects %}
-          <div class="cv-project"><h3><a href="{{ entry.url }}">{{ entry.name }} <span aria-hidden="true">↗</span></a></h3><p class="cv-entry-meta">{{ entry.period }} · {{ entry.organization }}<br>{{ entry.context }}</p><p>{{ entry.summary }}</p><ul class="cv-highlights">{% for point in entry.highlights %}<li>{{ point }}</li>{% endfor %}</ul></div>
+          <div class="cv-project"><h3><a href="{{ entry.url }}">{{ entry.name }} <span aria-hidden="true">↗</span></a></h3><p class="cv-entry-meta">{{ entry.organization }} · {{ entry.context }}</p><p>{{ entry.summary }}</p></div>
         {% endfor %}
       </section>
     </div>
