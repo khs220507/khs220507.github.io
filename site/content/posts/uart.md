@@ -70,6 +70,13 @@ GND -------------------- GND
 
 ## 경험과 연결
 
-STM32 프로젝트에서 UART·DMA 수신과 수신 버퍼 처리를 다뤘습니다. 장비 연동에서는 데이터 수신 자체뿐 아니라, 수신 데이터를 완성된 메시지로 분리하는 과정을 함께 봐야 합니다.
+STM32 학습 프로젝트에서는 HAL의 ReceiveToIdle DMA로 수신을 시작하고, 수신 콜백이 받은 바이트를 링 버퍼에 옮긴 뒤 메인 루프에서 명령을 처리했습니다. 링 버퍼가 가득 차면 오버플로 플래그를 세우도록 구성했습니다. 아래는 핵심 호출부를 간추린 것입니다.
 
-다음 글: [I2C](/posts/i2c/) · [SPI](/posts/spi/) · [통신 프로토콜 비교](/posts/serial-comparison/)
+```c
+HAL_UARTEx_ReceiveToIdle_DMA(&huart2, uartDmaRxBuffer, UART_RX_BUFFER_SIZE);
+/* 수신 콜백: 받은 바이트를 링 버퍼에 저장하고 DMA 수신 재시작 */
+```
+
+DMA는 수신 데이터를 메모리로 옮기는 방법이고, 줄바꿈 같은 메시지 경계 판단은 별도 로직입니다. RS-485 연결에서 UART를 어떻게 활용했는지는 [RS-485](/posts/rs-485/)에 정리했습니다.
+
+다음 글: [RS-485](/posts/rs-485/) · [I2C](/posts/i2c/) · [SPI](/posts/spi/) · [통신 프로토콜 비교](/posts/serial-comparison/)

@@ -70,6 +70,15 @@ CS 해제
 
 ## 경험과 연결
 
-STM32 프로젝트에서 W5500을 SPI로 연동했습니다. MCU와 W5500 사이의 SPI 전송, W5500이 처리하는 Ethernet·TCP 통신은 서로 다른 구간입니다. 문제를 확인할 때도 먼저 칩의 레지스터를 읽을 수 있는지, 이후 네트워크 연결이 가능한지를 나눠 볼 수 있습니다.
+STM32 통합 프로젝트에서 W5500 레지스터 읽기를 위해 SPI 프레임 송수신 코드를 작성했습니다. 아래 함수는 W5500 버전 레지스터 `0x0039`의 한 바이트를 읽도록 하위 함수에 요청합니다.
 
-함께 읽기: [UART](/posts/uart/) · [I2C](/posts/i2c/) · [통신 프로토콜 비교](/posts/serial-comparison/)
+```c
+spi2_result_t w5500_read_version(uint8_t *version, uint32_t timeout_us)
+{
+    return w5500_read(0U, 0x0039U, version, 1U, timeout_us);
+}
+```
+
+버전 읽기는 SPI 배선·모드·칩 선택을 확인할 출발점입니다. 이후 IP와 소켓 설정을 확인해야 네트워크 통신까지 점검할 수 있습니다. 프로젝트 코드의 기능별 구현과 실제 장비 검증 범위는 구분해서 봐야 합니다.
+
+함께 읽기: [Ethernet과 W5500](/posts/ethernet-w5500/) · [TCP-IP](/posts/tcp-ip/) · [통신 프로토콜 비교](/posts/serial-comparison/)
