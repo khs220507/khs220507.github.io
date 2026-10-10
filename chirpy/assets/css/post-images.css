@@ -1,5 +1,5 @@
 /* Keep concept diagrams readable in either color mode. */
-.content img.concept-diagram {
+.content .concept-diagram img {
   display: block;
   width: auto;
   max-width: 100%;
@@ -16,5 +16,5 @@
 .content .concept-credit { font-size: .77rem; color: var(--text-muted-color); line-height: 1.6; margin-bottom: 1.6rem; }
 #post-list .preview-img img { object-fit: contain; background: #061729; }
 @media (max-width: 576px) {
-  .content img.concept-diagram { padding: 8px; }
+  .content .concept-diagram img { padding: 8px; }
 }
