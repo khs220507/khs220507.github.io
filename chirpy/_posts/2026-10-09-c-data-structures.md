@@ -12,7 +12,7 @@ permalink: /posts/c-data-structures/
 toc: true
 source_note: blog/fundamentals/Data_Structures.md
 image:
-  path: /assets/img/covers-pana/c-data-structures.jpg
+  path: /assets/img/covers-simple/c-data-structures.jpg
   alt: "C 자료구조 — 문자열 버퍼·Stack·Queue·Ring Buffer 2D 주제 일러스트"
 ---
 
