@@ -9,6 +9,9 @@ categories:
   - 개발 노트
   - 장비 통신
 permalink: /posts/serial-comparison/
+image:
+  path: /assets/img/covers/serial-comparison.jpg
+  alt: "STM32에서 사용한 통신 한눈에 보기 주제 일러스트"
 ---
 
 
@@ -33,6 +36,16 @@ MCU SPI  ─ W5500 ─ Ethernet ─ IP ─ TCP ─ PC
 | [SPI](/posts/spi/) | 클록·칩 선택을 이용한 주변장치 접근 | W5500 |
 | [Ethernet과 W5500](/posts/ethernet-w5500/) | W5500을 통한 유선 네트워크 링크 | PC와 네트워크 연결 |
 | [TCP-IP](/posts/tcp-ip/) | IP 주소·포트로 연결하고 순서 있는 바이트 전달 | PC 통신·장비 제어 메시지 |
+
+<!-- concept-image -->
+![I2C는 장치들이 두 신호선을 공유합니다. 아래 비교표의 UART·SPI와 대상 선택 방식 및 배선을 비교해 보세요.](/assets/img/concepts/i2c-bus.svg)
+{: .concept-diagram }
+
+I2C는 장치들이 두 신호선을 공유합니다. 아래 비교표의 UART·SPI와 대상 선택 방식 및 배선을 비교해 보세요.
+{: .concept-caption }
+
+그림: [Cburnett · Lovibond · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:I2C.svg) · [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) · 원본 그대로 사용.
+{: .concept-credit }
 
 ## MCU 근거리 인터페이스 비교
 

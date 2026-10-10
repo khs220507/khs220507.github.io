@@ -11,6 +11,9 @@ tags:
 permalink: /posts/embedded-c/
 toc: true
 source_note: blog/fundamentals/C.md
+image:
+  path: /assets/img/covers/embedded-c.jpg
+  alt: "C — GPIO와 명령 버퍼에서 배운 포인터·구조체·정수형 주제 일러스트"
 ---
 
 > **검증 상태** · 현재 코드의 언어 요소를 설명합니다. 각 주변장치의 보드 검증 상태는 해당 기술 글을 따릅니다.
@@ -60,6 +63,16 @@ HAL_GPIO_WritePin(GPIOx, GPIO_Pin, GPIO_PIN_SET);
 ```
 
 이 호출에서 `GPIOx`는 `GPIOB`, `GPIO_Pin`은 `GREEN_LED_Pin`에 해당한다.
+
+<!-- concept-image -->
+![포인터 p가 변수 a의 위치를 가리키는 개념도. GPIOx도 주소를 전달하지만 실제 대상은 일반 변수가 아닌 주변장치 레지스터입니다.](/assets/img/concepts/pointer.png)
+{: .concept-diagram }
+
+포인터 p가 변수 a의 위치를 가리키는 개념도. GPIOx도 주소를 전달하지만 실제 대상은 일반 변수가 아닌 주변장치 레지스터입니다.
+{: .concept-caption }
+
+그림: [Pietrodn · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Pointers_in_programming.svg) · [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) · 공식 PNG 미리보기 사용 · 내용 변경 없음.
+{: .concept-credit }
 
 ### 포인터와 일반 값의 차이
 

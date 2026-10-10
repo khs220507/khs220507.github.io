@@ -11,6 +11,9 @@ tags:
 permalink: /posts/c-data-structures/
 toc: true
 source_note: blog/fundamentals/Data_Structures.md
+image:
+  path: /assets/img/covers/c-data-structures.jpg
+  alt: "C 자료구조 — 문자열 버퍼·Stack·Queue·Ring Buffer 주제 일러스트"
 ---
 
 > **검증 상태** · 호스트 CMake·CTest 1/1 통과와 ARM GCC 문법 검사 기록이 있습니다. 호스트 코드는 보드 검증 대상이 아닙니다.
@@ -268,6 +271,16 @@ enqueue(10) → enqueue(20) → dequeue() = 10 → dequeue() = 20
 배열 기반 Queue는 `head`, `tail`, `count`로 FIFO 순서를 관리하며, 기본 구현에서는 배열 끝과 Empty 경계를 검사한다.
 
 ## 원형 버퍼(Ring Buffer)
+
+<!-- concept-image -->
+![원형 버퍼의 유효 데이터 구간과 양 끝 위치. X는 빈 칸이며, 배열 마지막 다음을 처음으로 연결하는 인덱스 관리를 시각화합니다.](/assets/img/concepts/ring-buffer.png)
+{: .concept-diagram }
+
+원형 버퍼의 유효 데이터 구간과 양 끝 위치. X는 빈 칸이며, 배열 마지막 다음을 처음으로 연결하는 인덱스 관리를 시각화합니다.
+{: .concept-caption }
+
+그림: [Cburnett · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Circular_buffer_-_XX123XX_with_pointers.svg) · [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) · 공식 PNG 미리보기 사용 · 내용 변경 없음.
+{: .concept-credit }
 
 ### 기본 개념
 

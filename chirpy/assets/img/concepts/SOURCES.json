@@ -1,0 +1,62 @@
+{
+  "uart-frame.svg": [
+    "UART timing diagram.svg",
+    "IngenieroLoco",
+    "CC BY-SA 4.0",
+    "https://creativecommons.org/licenses/by-sa/4.0/"
+  ],
+  "i2c-bus.svg": [
+    "I2C.svg",
+    "Cburnett · Lovibond",
+    "CC BY-SA 3.0",
+    "https://creativecommons.org/licenses/by-sa/3.0/"
+  ],
+  "spi-bus.svg": [
+    "SPI single slave.svg",
+    "Cburnett",
+    "CC BY-SA 3.0",
+    "https://creativecommons.org/licenses/by-sa/3.0/"
+  ],
+  "rs485-network.png": [
+    "RS-485 Network.png",
+    "EE JRW",
+    "CC BY-SA 3.0",
+    "https://creativecommons.org/licenses/by-sa/3.0/"
+  ],
+  "tcp-ip-node.svg": [
+    "Basic TCP-IP node-en.svg",
+    "Michel Bakni",
+    "CC BY-SA 4.0",
+    "https://creativecommons.org/licenses/by-sa/4.0/"
+  ],
+  "gpio-pullup.png": [
+    "Pullup Resistor Diagram.png",
+    "Tombob51",
+    "CC0 1.0",
+    "https://creativecommons.org/publicdomain/zero/1.0/"
+  ],
+  "ring-buffer.png": [
+    "Circular buffer - XX123XX with pointers.svg",
+    "Cburnett",
+    "CC BY-SA 3.0",
+    "https://creativecommons.org/licenses/by-sa/3.0/"
+  ],
+  "pwm-duty.png": [
+    "Duty cycle general.svg",
+    "Cyril BUTTAY · Krishnavedala",
+    "CC BY-SA 3.0",
+    "https://creativecommons.org/licenses/by-sa/3.0/"
+  ],
+  "pointer.png": [
+    "Pointers in programming.svg",
+    "Pietrodn",
+    "CC BY-SA 2.5",
+    "https://creativecommons.org/licenses/by-sa/2.5/"
+  ],
+  "adc-symbol.png": [
+    "ADC Symbol.svg",
+    "Tjwikcom · AlexanderKolpakov",
+    "Public domain",
+    "https://commons.wikimedia.org/wiki/File:ADC_Symbol.svg"
+  ]
+}

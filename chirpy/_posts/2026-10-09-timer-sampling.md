@@ -11,6 +11,9 @@ tags:
 permalink: /posts/timer-sampling/
 toc: true
 source_note: blog/technologies/Timer.md
+image:
+  path: /assets/img/covers/timer-sampling.jpg
+  alt: "STM32 Timer — TIM2 인터럽트로 500ms 샘플링 주제 일러스트"
 ---
 
 > **검증 상태** · 구현·빌드·Flash·Verify, 약 500ms UART 출력과 LED 동작 확인 기록이 있습니다.
@@ -23,6 +26,16 @@ source_note: blog/technologies/Timer.md
 Timer는 MCU 내부 Clock을 세어 정해진 시간마다 Event를 만드는 주변장치다. `05_Timer_Sampling`에서는 TIM2 Update Event를 Interrupt로 받아 CdS 측정 시점을 500ms마다 만든다.
 
 APB1 Timer Clock은 84MHz다. Prescaler를 `8399`로 설정하면 `84MHz ÷ (8399 + 1) = 10kHz`가 되어 Counter는 100µs마다 하나씩 증가한다. Period가 `4999`이면 5,000번 세므로 `100µs × 5000 = 500ms`마다 Update Event가 발생한다.
+
+<!-- concept-image -->
+![TIM2는 주기를 만들고 Callback은 Flag만 설정하며, 실제 측정은 Main Loop에서 수행합니다.](/assets/img/concepts/timer-flow.svg)
+{: .concept-diagram }
+
+TIM2는 주기를 만들고 Callback은 Flag만 설정하며, 실제 측정은 Main Loop에서 수행합니다.
+{: .concept-caption }
+
+그림: 본문 내용을 바탕으로 자체 제작한 흐름도.
+{: .concept-credit }
 
 ## 구현 목표
 
