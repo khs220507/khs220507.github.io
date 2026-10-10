@@ -12,8 +12,8 @@ permalink: /posts/timer-sampling/
 toc: true
 source_note: blog/technologies/Timer.md
 image:
-  path: /assets/img/covers-flat/timer-sampling.png
-  alt: "STM32 Timer — TIM2 인터럽트로 500ms 샘플링 주제 카드"
+  path: /assets/img/covers-2d/timer-sampling.jpg
+  alt: "STM32 Timer — TIM2 인터럽트로 500ms 샘플링 2D 주제 일러스트"
 ---
 
 > **검증 상태** · 구현·빌드·Flash·Verify, 약 500ms UART 출력과 LED 동작 확인 기록이 있습니다.

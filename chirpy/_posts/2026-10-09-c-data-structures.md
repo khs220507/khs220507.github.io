@@ -12,8 +12,8 @@ permalink: /posts/c-data-structures/
 toc: true
 source_note: blog/fundamentals/Data_Structures.md
 image:
-  path: /assets/img/covers-flat/c-data-structures.png
-  alt: "C 자료구조 — 문자열 버퍼·Stack·Queue·Ring Buffer 주제 카드"
+  path: /assets/img/covers-2d/c-data-structures.jpg
+  alt: "C 자료구조 — 문자열 버퍼·Stack·Queue·Ring Buffer 2D 주제 일러스트"
 ---
 
 > **검증 상태** · 호스트 CMake·CTest 1/1 통과와 ARM GCC 문법 검사 기록이 있습니다. 호스트 코드는 보드 검증 대상이 아닙니다.
