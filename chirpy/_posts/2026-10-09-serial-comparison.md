@@ -10,8 +10,8 @@ categories:
   - 장비 통신
 permalink: /posts/serial-comparison/
 image:
-  path: /assets/img/covers/serial-comparison.jpg
-  alt: "STM32에서 사용한 통신 한눈에 보기 주제 일러스트"
+  path: /assets/img/covers-flat/serial-comparison.png
+  alt: "STM32에서 사용한 통신 한눈에 보기 주제 카드"
 ---
 
 

@@ -12,8 +12,8 @@ permalink: /posts/timer-sampling/
 toc: true
 source_note: blog/technologies/Timer.md
 image:
-  path: /assets/img/covers/timer-sampling.jpg
-  alt: "STM32 Timer — TIM2 인터럽트로 500ms 샘플링 주제 일러스트"
+  path: /assets/img/covers-flat/timer-sampling.png
+  alt: "STM32 Timer — TIM2 인터럽트로 500ms 샘플링 주제 카드"
 ---
 
 > **검증 상태** · 구현·빌드·Flash·Verify, 약 500ms UART 출력과 LED 동작 확인 기록이 있습니다.
@@ -129,6 +129,16 @@ if (timerSampleRequested != 0U)
 `TIM2_IRQHandler()`는 Main Loop가 직접 부르는 함수가 아니다. 500ms Update Event가 발생하면 MCU가 현재 Main Loop를 잠깐 멈추고 자동으로 실행한다. Callback까지 끝나면 MCU는 멈췄던 Main Loop 자리로 돌아온다.
 
 Interrupt 안에서 `printf()`나 ADC Polling을 실행하지 않는다. 이 작업들은 시간이 걸릴 수 있으므로, 짧은 Callback은 “지금 측정할 차례”만 Main Loop에 알린다.
+
+<!-- explain:timer-tasks -->
+![타이머는 측정할 시점을 알리고, ADC Polling·출력은 Main Loop가 담당합니다.](/assets/img/explain/timer-tasks.svg)
+{: .concept-diagram }
+
+타이머는 측정할 시점을 알리고, ADC Polling·출력은 Main Loop가 담당합니다.
+{: .concept-caption }
+
+*본문의 코드와 예시를 바탕으로 직접 구성한 설명도.*
+{: .concept-credit }
 
 ## 배운 점
 

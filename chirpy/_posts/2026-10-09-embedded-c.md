@@ -12,8 +12,8 @@ permalink: /posts/embedded-c/
 toc: true
 source_note: blog/fundamentals/C.md
 image:
-  path: /assets/img/covers/embedded-c.jpg
-  alt: "C — GPIO와 명령 버퍼에서 배운 포인터·구조체·정수형 주제 일러스트"
+  path: /assets/img/covers-flat/embedded-c.png
+  alt: "C — GPIO와 명령 버퍼에서 배운 포인터·구조체·정수형 주제 카드"
 ---
 
 > **검증 상태** · 현재 코드의 언어 요소를 설명합니다. 각 주변장치의 보드 검증 상태는 해당 기술 글을 따릅니다.
@@ -440,6 +440,16 @@ static void command_buffer_reset(CommandBuffer *buffer)
     buffer->data[0] = '\0';
 }
 ```
+
+<!-- explain:c-pointer -->
+![구조체 변수, 주소, 포인터를 구분한 개념도입니다. 포인터로 구조체를 전달하면 원본 멤버에 접근할 수 있습니다.](/assets/img/explain/c-pointer.svg)
+{: .concept-diagram }
+
+구조체 변수, 주소, 포인터를 구분한 개념도입니다. 포인터로 구조체를 전달하면 원본 멤버에 접근할 수 있습니다.
+{: .concept-caption }
+
+*본문의 코드와 예시를 바탕으로 직접 구성한 설명도.*
+{: .concept-credit }
 
 ### 코드 설명
 

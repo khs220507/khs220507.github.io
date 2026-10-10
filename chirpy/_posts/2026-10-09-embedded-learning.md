@@ -10,8 +10,8 @@ tags:
 permalink: /posts/embedded-learning/
 pin: true
 image:
-  path: /assets/img/covers/embedded-learning.jpg
-  alt: "STM32 구현 노트 — 학습 목차와 검증 상태 주제 일러스트"
+  path: /assets/img/covers-flat/embedded-learning.png
+  alt: "STM32 구현 노트 — 학습 목차와 검증 상태 주제 카드"
 ---
 
 NUCLEO-F401RE에서 직접 구현한 코드를 기술별로 정리했습니다. C와 HAL·CMSIS의 기반 지식부터 GPIO, UART, DMA, ADC, Timer, PWM, I2C로 이어집니다.

@@ -12,8 +12,8 @@ permalink: /posts/c-data-structures/
 toc: true
 source_note: blog/fundamentals/Data_Structures.md
 image:
-  path: /assets/img/covers/c-data-structures.jpg
-  alt: "C 자료구조 — 문자열 버퍼·Stack·Queue·Ring Buffer 주제 일러스트"
+  path: /assets/img/covers-flat/c-data-structures.png
+  alt: "C 자료구조 — 문자열 버퍼·Stack·Queue·Ring Buffer 주제 카드"
 ---
 
 > **검증 상태** · 호스트 CMake·CTest 1/1 통과와 ARM GCC 문법 검사 기록이 있습니다. 호스트 코드는 보드 검증 대상이 아닙니다.
@@ -339,6 +339,16 @@ dequeue: data[head] 반환 → head 순환 → count 감소
 
 Ring Buffer는 배열을 이동하지 않고 `head`와 `tail`을 순환시켜 고정 메모리에서 FIFO를 구현하는 자료구조다.
 
+
+<!-- explain:ring-wrap -->
+![용량 4의 count 방식 예시입니다. Full일 때도 head와 tail이 같을 수 있으므로 count를 함께 봅니다. UART RX의 한 칸 비우는 구현과는 다릅니다.](/assets/img/explain/ring-wrap.svg)
+{: .concept-diagram }
+
+용량 4의 count 방식 예시입니다. Full일 때도 head와 tail이 같을 수 있으므로 count를 함께 봅니다. UART RX의 한 칸 비우는 구현과는 다릅니다.
+{: .concept-caption }
+
+*본문의 코드와 예시를 바탕으로 직접 구성한 설명도.*
+{: .concept-credit }
 
 ## UART DMA 연결 상태
 
