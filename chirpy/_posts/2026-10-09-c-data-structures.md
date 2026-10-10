@@ -273,10 +273,10 @@ enqueue(10) → enqueue(20) → dequeue() = 10 → dequeue() = 20
 ## 원형 버퍼(Ring Buffer)
 
 <!-- concept-image -->
-![원형 버퍼의 유효 데이터 구간과 양 끝 위치. X는 빈 칸이며, 배열 마지막 다음을 처음으로 연결하는 인덱스 관리를 시각화합니다.](/assets/img/concepts/ring-buffer.png)
+![원형 버퍼의 유효 데이터 구간과 양 끝 위치. 숫자 없는 칸은 비어 있으며, 배열 마지막 다음을 처음으로 연결하는 인덱스 관리를 시각화합니다.](/assets/img/concepts/ring-buffer.png)
 {: .concept-diagram }
 
-원형 버퍼의 유효 데이터 구간과 양 끝 위치. X는 빈 칸이며, 배열 마지막 다음을 처음으로 연결하는 인덱스 관리를 시각화합니다.
+원형 버퍼의 유효 데이터 구간과 양 끝 위치. 숫자 없는 칸은 비어 있으며, 배열 마지막 다음을 처음으로 연결하는 인덱스 관리를 시각화합니다.
 {: .concept-caption }
 
 그림: [Cburnett · Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Circular_buffer_-_XX123XX_with_pointers.svg) · [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) · 공식 PNG 미리보기 사용 · 내용 변경 없음.
