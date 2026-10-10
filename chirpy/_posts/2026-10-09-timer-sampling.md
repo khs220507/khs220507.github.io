@@ -12,7 +12,7 @@ permalink: /posts/timer-sampling/
 toc: true
 source_note: blog/technologies/Timer.md
 image:
-  path: /assets/img/covers-2d/timer-sampling.jpg
+  path: /assets/img/covers-pana/timer-sampling.jpg
   alt: "STM32 Timer — TIM2 인터럽트로 500ms 샘플링 2D 주제 일러스트"
 ---
 

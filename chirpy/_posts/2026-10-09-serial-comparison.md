@@ -10,7 +10,7 @@ categories:
   - 장비 통신
 permalink: /posts/serial-comparison/
 image:
-  path: /assets/img/covers-2d/serial-comparison.jpg
+  path: /assets/img/covers-pana/serial-comparison.jpg
   alt: "STM32에서 사용한 통신 한눈에 보기 2D 주제 일러스트"
 ---
 

@@ -12,7 +12,7 @@ permalink: /posts/embedded-c/
 toc: true
 source_note: blog/fundamentals/C.md
 image:
-  path: /assets/img/covers-2d/embedded-c.jpg
+  path: /assets/img/covers-pana/embedded-c.jpg
   alt: "C — GPIO와 명령 버퍼에서 배운 포인터·구조체·정수형 2D 주제 일러스트"
 ---
 

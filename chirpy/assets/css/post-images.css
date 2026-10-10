@@ -14,7 +14,7 @@
 }
 .content .concept-caption { font-size: .92rem; line-height: 1.7; margin-bottom: .4rem; }
 .content .concept-credit { font-size: .77rem; color: var(--text-muted-color); line-height: 1.6; margin-bottom: 1.6rem; }
-#post-list .preview-img img { object-fit: contain; background: #fff9e9; }
+#post-list .preview-img img { object-fit: contain; background: #f8f9fa; }
 @media (max-width: 576px) {
   .content .concept-diagram img { padding: 8px; }
 }

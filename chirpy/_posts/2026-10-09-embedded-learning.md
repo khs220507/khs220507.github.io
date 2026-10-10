@@ -10,7 +10,7 @@ tags:
 permalink: /posts/embedded-learning/
 pin: true
 image:
-  path: /assets/img/covers-2d/embedded-learning.jpg
+  path: /assets/img/covers-pana/embedded-learning.jpg
   alt: "STM32 구현 노트 — 학습 목차와 검증 상태 2D 주제 일러스트"
 ---
 
