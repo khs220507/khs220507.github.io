@@ -2,7 +2,7 @@ theme: jekyll-theme-chirpy
 lang: ko-KR
 timezone: Asia/Seoul
 title: 김현수
-tagline: 장비 제어 · 시스템 연동 · 임베디드 개발
+tagline: 장비 제어 · 시스템 연동 · 임베디드 개발 · UI/UX
 description: 김현수의 경력과 프로젝트, 장비 통신·임베디드 개발 기록입니다.
 url: https://khs220507.github.io
 github:
