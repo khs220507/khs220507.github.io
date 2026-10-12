@@ -18,3 +18,5 @@ STM32 개인 프로젝트에서는 C 기반 베어메탈 환경에서 센서와 
 고객과 협력업체의 요구사항을 이해하고 기술적 제약을 조율하는 과정도 개발 업무의 일부로 생각합니다.
 
 [경력·학력·기술](/cv/) · [프로젝트 상세](/projects/) · [구현 학습 노트](/posts/embedded-learning/)
+
+{% include project-gallery.html %}

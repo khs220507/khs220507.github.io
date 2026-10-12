@@ -1,0 +1,26 @@
+<section class="portfolio-gallery" aria-labelledby="personal-projects">
+  <h2 id="personal-projects">개인·교육 프로젝트</h2>
+  <p class="portfolio-intro">직접 진행한 개인 프로젝트와 교육과정의 팀 프로젝트입니다. 화면과 함께 주요 기능, 기술 스택, 참여 범위를 정리했습니다.</p>
+  <div class="portfolio-grid">
+    {% for project in site.data.project_gallery %}
+    <article class="portfolio-card{% unless project.image %} portfolio-text-card{% endunless %}">
+      {% if project.image and project.public_screenshot == true %}
+      <figure class="portfolio-figure">
+        <a href="{{ project.image | relative_url }}" aria-label="{{ project.name | escape }} 화면 크게 보기">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.alt | escape }}" loading="lazy" decoding="async" width="{{ project.width }}" height="{{ project.height }}">
+        </a>
+        {% if project.caption %}<figcaption>{{ project.caption }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+      <div class="portfolio-body">
+        <div class="portfolio-labels"><span>{{ project.organization }}</span>{% if project.status %}<span class="portfolio-status">{{ project.status }}</span>{% endif %}</div>
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        {% if project.stack and project.stack != empty %}<p class="portfolio-stack"><strong>기술</strong> {{ project.stack }}</p>{% endif %}
+        {% if project.note %}<p class="portfolio-note">{{ project.note }}</p>{% endif %}
+        {% if project.repository %}<a class="portfolio-source" href="{{ project.repository }}">GitHub 저장소 <span aria-hidden="true">↗</span></a>{% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>

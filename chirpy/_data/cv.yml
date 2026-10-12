@@ -125,7 +125,7 @@ cv:
         highlights:
           - 교육과정의 배달 플랫폼 클론 최종 팀 프로젝트를 수행했습니다.
           - 교육과정에서 진행한 4회 팀 프로젝트 모두 팀장을 맡아 4~5인 개발팀을 이끌었습니다.
-        technologies: Spring · Java · JSP · JavaScript · MyBatis · MySQL · Docker · AWS EC2 · Git · Slack
+        technologies: Spring · Java · JSP · JavaScript · MyBatis · MySQL · AWS EC2 · Git · Slack
         repository: https://github.com/khs220507/Acorn-Baemin
         url: https://khs220507.github.io/projects/delivery-platform/
     Education:
@@ -151,7 +151,7 @@ cv:
       - name: Development / Debugging
         keywords: Git, GitHub, GitLab, Redmine, Visual Studio, Visual Studio Code, STM32CubeIDE, Docklight, Wireshark, IBM Rational Rhapsody, 로직 애널라이저, 멀티미터
       - name: Team Project Tools
-        keywords: Docker, AWS EC2, Slack
+        keywords: AWS EC2, Slack
     Certificates:
       - name: 정보처리기사
         issuer: 한국산업인력공단

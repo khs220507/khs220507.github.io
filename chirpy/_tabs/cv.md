@@ -21,7 +21,7 @@ toc: false
     <div class="cv-contact"><a href="mailto:{{ cv.email }}"><i class="fas fa-envelope" aria-hidden="true"></i> {{ cv.email }}</a><a href="https://github.com/khs220507"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a></div>
   </header>
 
-  <nav class="cv-jump" aria-label="이력서 항목"><a href="#experience">경력</a><a href="#projects">프로젝트</a><a href="#education">학력</a><a href="#skills">기술</a><a href="#training">교육</a><a href="#certificates">자격증</a></nav>
+  <nav class="cv-jump" aria-label="이력서 항목"><a href="#experience">경력</a><a href="#projects">프로젝트</a><a href="#education">학력</a><a href="#skills">기술</a><a href="#training">교육</a><a href="#certificates">자격증</a><a href="#personal-projects">개인·교육 프로젝트</a></nav>
 
   <div class="cv-grid">
     <div class="cv-primary">
@@ -62,3 +62,5 @@ toc: false
     </div>
   </div>
 </div>
+
+{% include project-gallery.html %}
