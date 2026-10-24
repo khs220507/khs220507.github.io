@@ -23,6 +23,9 @@ jobs:
           bundler-cache: true
           working-directory: chirpy
           bundler: '2.6.9'
+      - name: Verify required post thumbnails
+        working-directory: chirpy
+        run: bundle exec ruby tools/verify_post_covers.rb
       - name: Build
         working-directory: chirpy
         env:
