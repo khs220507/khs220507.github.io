@@ -6,6 +6,9 @@ tags: [ROS, ROS2, 로봇, 기초]
 categories: [ROS, 핵심 개념]
 permalink: /posts/ros2-core-concepts/
 toc: true
+image:
+  path: /assets/img/covers-simple/ros2-core-concepts.png
+  alt: ROS 2 노드가 토픽을 통해 여러 노드로 메시지를 전달하는 구조
 source_note: 블로그/기술노트/ROS/ROS 2 핵심 개념.md
 ---
 
