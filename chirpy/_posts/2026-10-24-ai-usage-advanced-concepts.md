@@ -28,7 +28,7 @@ mermaid: true
 | 서버(Server) | MCP를 통해 데이터와 기능을 제공하는 프로그램 |
 
 ```mermaid
-flowchart LR
+flowchart TD
     subgraph H[AI 애플리케이션 · 호스트]
         M[모델과 실행 제어] <--> C[MCP 클라이언트]
     end

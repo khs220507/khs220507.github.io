@@ -52,7 +52,7 @@ flowchart TD
 **학습(Training)**은 데이터와 학습 목표를 바탕으로 모델을 조정하는 과정입니다. **추론(Inference)**은 학습된 모델에 입력을 넣어 출력을 계산하는 과정입니다.
 
 ```mermaid
-flowchart LR
+flowchart TD
     D[학습 데이터] --> T[학습]
     T --> M[학습된 모델]
     M --> I[추론]

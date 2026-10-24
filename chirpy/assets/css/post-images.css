@@ -16,6 +16,8 @@
 .content .concept-credit { font-size: .77rem; color: var(--text-muted-color); line-height: 1.6; margin-bottom: 1.6rem; }
 #post-list .preview-img img { object-fit: contain; background: #ffffff; }
 .preview-img img[src*="/covers-simple/"] { object-fit: contain; background: #ffffff; }
+.img-link.preview-img:has(img[src*="/covers-simple/"]) { aspect-ratio: auto; height: auto; }
+.img-link.preview-img img[src*="/covers-simple/"] { display: block; width: 100%; height: auto; }
 @media (max-width: 576px) {
   .content .concept-diagram img { padding: 8px; }
 }

@@ -90,7 +90,7 @@ WPF의 객체 관계는 하나의 관점으로만 표현되지 않습니다.
 부모와 자식은 레이아웃 계산에 함께 참여합니다. 속성 변경으로 레이아웃이 무효화되면 필요한 계산이 다시 예약될 수 있으며, 모든 속성 변경이 같은 비용을 발생시키는 것은 아닙니다. [Microsoft: 레이아웃 시스템](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/advanced/layout)
 
 ```mermaid
-flowchart LR
+flowchart TD
     P[속성 또는 콘텐츠 변경] --> L[필요한 레이아웃 재계산]
     L --> V[시각적 내용 갱신]
     V --> C[렌더링 및 합성]

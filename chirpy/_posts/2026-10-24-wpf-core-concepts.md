@@ -68,7 +68,7 @@ XAML과 코드는 서로 다른 애플리케이션이 아니라 하나의 프로
 | Model | 업무 데이터와 도메인 규칙 |
 
 ```mermaid
-flowchart LR
+flowchart TD
     V[View] -->|바인딩과 커맨드| VM[ViewModel]
     VM -->|상태 변경 알림| V
     VM -->|업무 기능 사용| M[Model 및 서비스]
